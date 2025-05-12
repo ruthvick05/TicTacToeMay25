@@ -32,6 +32,10 @@ public class Cell {
         return cellState;
     }
 
+    public boolean isEmpty() {
+        return this.cellState == CellState.EMPTY;
+    }
+
     public void setCellState(CellState cellState) {
         this.cellState = cellState;
     }

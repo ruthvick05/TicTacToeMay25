@@ -1,5 +1,6 @@
 package com.scaler.controller;
 
+import com.scaler.exceptions.InvalidMoveException;
 import com.scaler.models.Game;
 import com.scaler.models.GameState;
 import com.scaler.models.Player;
@@ -17,8 +18,8 @@ public class GameController {
                    .build();
     }
 
-    public void makeMove(Game game) {
-
+    public void makeMove(Game game) throws InvalidMoveException {
+        game.makeMove();
     }
 
     public GameState getGameState(Game game) {
