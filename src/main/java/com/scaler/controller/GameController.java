@@ -10,7 +10,6 @@ import java.util.List;
 public class GameController {
     // Players will be interacting with GameController to make any operation.
     // startGame(), makeMove(), getGameState(), printBoard(), getWinner()
-
     public Game startGame(int dimension, List<Player> players) {
         return Game.getBuilder()
                    .setDimension(dimension)
@@ -27,7 +26,7 @@ public class GameController {
     }
 
     public void printBoard(Game game) {
-
+        game.displayBoard();
     }
 
     public Player getWinner(Game game) {

@@ -85,7 +85,7 @@ public class Game {
 
         System.out.println("This is " + currentPlayer.getName() + "'s move");
 
-        Move move = currentPlayer.makeMove();
+        Move move = currentPlayer.makeMove(board);
 
         //check if move is valid or not.
         if (!validateMove(move)) {
@@ -141,6 +141,10 @@ public class Game {
         }
 
         return board.getBoard().get(row).get(col).isEmpty();
+    }
+
+    public void displayBoard() {
+        this.board.displayBoard();
     }
 
     public static class Builder {
