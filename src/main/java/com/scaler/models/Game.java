@@ -171,6 +171,15 @@ public class Game {
 
         //TODO
         public void validatePlayersCount() {
+            public void validatePlayersCount() {
+            int expectedPlayerCount = dimension - 1;
+        
+            if (players.size() < expectedPlayerCount) {
+                throw new RuntimeException("More players required. Either decrease the dimension or increase the number of players.");
+            } else if (players.size() > expectedPlayerCount) {
+                throw new RuntimeException("Too many players. Either increase the dimension or decrease the number of players.");
+            }
+        }
 
         }
 
